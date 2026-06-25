@@ -77,12 +77,9 @@
       pointer-events: none;
     }
     .hero-inner {
-      max-width: 1100px;
+      max-width: 780px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 420px;
-      gap: 48px;
-      align-items: center;
+      text-align: center;
     }
 
     /* Hero left */
@@ -117,7 +114,9 @@
       font-size: 17px;
       line-height: 1.8;
       margin-bottom: 32px;
-      max-width: 480px;
+      max-width: 580px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     /* Trust pills row */
@@ -125,7 +124,8 @@
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 32px;
+      justify-content: center;
+      margin-bottom: 0;
     }
     .trust-pill {
       display: flex;
@@ -167,126 +167,49 @@
     }
 
     /* ============ LEAD FORM ============ */
-    .form-card {
-      background: #fff;
-      border-radius: 20px;
-      padding: 32px 28px;
-      box-shadow: var(--shadow-lg);
-      position: relative;
-    }
-    .form-card::before {
-      content: '';
-      position: absolute;
-      top: 0; right: 0; left: 0;
-      height: 5px;
-      background: linear-gradient(90deg, var(--teal), var(--yellow));
-      border-radius: 20px 20px 0 0;
-    }
-    .form-title {
-      font-size: 20px;
-      font-weight: 900;
-      color: var(--navy);
-      margin-bottom: 6px;
-      text-align: center;
-    }
-    .form-subtitle {
-      font-size: 13px;
-      color: var(--text-light);
-      text-align: center;
-      margin-bottom: 24px;
-    }
-    .form-subtitle strong { color: var(--teal); }
-
-    .field { margin-bottom: 16px; }
-    .field label {
-      display: block;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 6px;
-    }
-    .field input,
-    .field select {
-      width: 100%;
-      padding: 12px 16px;
-      border: 1.5px solid rgba(26,46,111,0.15);
-      border-radius: var(--radius);
-      font-family: var(--font);
-      font-size: 15px;
-      color: var(--text);
-      background: var(--off-white);
-      transition: border-color .2s, box-shadow .2s;
-      appearance: none;
-      -webkit-appearance: none;
-    }
-    .field input:focus,
-    .field select:focus {
-      outline: none;
-      border-color: var(--teal);
-      box-shadow: 0 0 0 3px rgba(0,180,166,.12);
-      background: #fff;
-    }
-    .field input::placeholder { color: #aab; }
-
-    .select-wrap { position: relative; }
-    .select-wrap::after {
-      content: '▾';
-      position: absolute;
-      left: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--navy);
-      font-size: 13px;
-      pointer-events: none;
-    }
-
-    .submit-btn {
-      width: 100%;
-      padding: 15px;
-      background: linear-gradient(135deg, var(--teal), #008f85);
-      color: #fff;
-      border: none;
-      border-radius: var(--radius);
-      font-family: var(--font);
-      font-size: 17px;
-      font-weight: 800;
-      cursor: pointer;
-      transition: transform .2s, box-shadow .2s;
+    /* ============ HERO CTA BUTTONS ============ */
+    .hero-cta-group {
       display: flex;
-      align-items: center;
+      gap: 12px;
+      margin-top: 32px;
       justify-content: center;
+      flex-wrap: nowrap;
+    }
+    .btn-call {
+      display: inline-flex;
+      align-items: center;
       gap: 8px;
-      margin-top: 8px;
+      background: var(--yellow);
+      color: var(--navy-dark);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 800;
+      direction: ltr;
+      box-shadow: 0 3px 12px rgba(245,194,0,.30);
+      transition: transform .2s, box-shadow .2s;
+      text-decoration: none;
+      white-space: nowrap;
     }
-    .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,180,166,.35); }
+    .btn-call:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(245,194,0,.40); }
+    .btn-call-label { font-size: 10px; font-weight: 600; opacity: .75; direction: rtl; display: block; margin-bottom: 1px; }
 
-    .form-disclaimer {
-      text-align: center;
-      font-size: 12px;
-      color: var(--text-light);
-      margin-top: 12px;
-    }
-
-    /* WhatsApp alt */
-    .whatsapp-alt {
-      display: flex;
+    .btn-whatsapp {
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
       gap: 8px;
       background: #25D366;
       color: #fff;
-      padding: 13px;
-      border-radius: var(--radius);
-      font-size: 15px;
-      font-weight: 700;
-      margin-top: 12px;
-      transition: background .2s;
-      cursor: pointer;
-      border: none;
-      width: 100%;
-      font-family: var(--font);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 800;
+      box-shadow: 0 3px 12px rgba(37,211,102,.25);
+      transition: transform .2s, box-shadow .2s, background .2s;
+      text-decoration: none;
+      white-space: nowrap;
     }
-    .whatsapp-alt:hover { background: #1ebe5d; }
+    .btn-whatsapp:hover { background: #1ebe5d; transform: translateY(-2px); box-shadow: 0 6px 18px rgba(37,211,102,.35); }
 
     /* ============ BENEFITS ============ */
     .section { padding: 72px 24px; }
@@ -448,20 +371,20 @@
     .cta-phone-big {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       background: var(--yellow);
       color: var(--navy-dark);
-      padding: 16px 36px;
-      border-radius: var(--radius);
-      font-size: 24px;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-size: 20px;
       font-weight: 900;
       direction: ltr;
-      box-shadow: 0 6px 24px rgba(245,194,0,.35);
+      box-shadow: 0 4px 20px rgba(245,194,0,.30);
       transition: transform .2s, box-shadow .2s;
       position: relative;
       z-index: 1;
     }
-    .cta-phone-big:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(245,194,0,.45); }
+    .cta-phone-big:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(245,194,0,.40); }
 
     /* ============ FOOTER ============ */
     footer {
@@ -475,12 +398,11 @@
 
     /* ============ RESPONSIVE ============ */
     @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .form-card { max-width: 520px; margin: 0 auto; }
+      .hero-inner { max-width: 100%; }
     }
-    @media (max-width: 500px) {
-      .hero { padding: 36px 16px 48px; }
-      .form-card { padding: 24px 18px; }
+    @media (max-width: 540px) {
+      .hero { padding: 40px 16px 52px; }
+      .btn-call, .btn-whatsapp { font-size: 13px; padding: 9px 16px; }
       .benefits-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 360px) {
@@ -502,89 +424,42 @@
   <!-- ======= HERO ======= -->
   <section class="hero">
     <div class="hero-inner">
+      <div class="hero-eyebrow">
+        <span class="dot"></span>
+        خدمة التوسط في الاستقدام
+      </div>
 
-      <!-- Left: Copy -->
-      <div>
-        <div class="hero-eyebrow">
-          <span class="dot"></span>
-          خدمة التوسط في الاستقدام
-        </div>
+      <h1>
+        <span class="accent">توسط</span> عاملة منزلية<br>
+        <span class="yellow">مدربة ومضمونة</span>
+      </h1>
 
-        <h1>
-          <span class="accent">توسط</span> عاملة منزلية<br>
-          <span class="yellow">مدربة ومضمونة</span>
-        </h1>
+      <p class="hero-tagline">
+        نتولى كل شيء من الاختيار حتى الوصول — فحص طبي، تدريب احترافي، استلام من المطار، ويونيفورم جاهز.
+        <br><strong style="color:#fff;">راحة بالك... أولويتنا.</strong>
+      </p>
 
-        <p class="hero-tagline">
-          نتولى كل شيء من الاختيار حتى الوصول — فحص طبي، تدريب احترافي، استلام من المطار، ويونيفورم جاهز.
-          <br><strong style="color:#fff;">راحة بالك... أولويتنا.</strong>
-        </p>
+      <div class="hero-trust">
+        <div class="trust-pill">✈️ استلام من المطار</div>
+        <div class="trust-pill">🏥 فحص طبي</div>
+        <div class="trust-pill">📋 تدريب 5 أيام</div>
+        <div class="trust-pill">👕 يونيفورم</div>
+        <div class="trust-pill">🎒 شنطة متكاملة</div>
+      </div>
 
-        <div class="hero-trust">
-          <div class="trust-pill">✈️ استلام من المطار</div>
-          <div class="trust-pill">🏥 فحص طبي</div>
-          <div class="trust-pill">📋 تدريب 5 أيام</div>
-          <div class="trust-pill">👕 يونيفورم</div>
-          <div class="trust-pill">🎒 شنطة متكاملة</div>
-        </div>
-
-        <span class="hero-phone-label">اتصل بنا على الرقم الموحد</span>
-        <a href="tel:+966920005708" class="hero-phone">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg>
-          920005708
+      <div class="hero-cta-group" style="justify-content:center;">
+        <a href="tel:+966920005708" class="btn-call">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg>
+          <div>
+            <span class="btn-call-label">اتصل بنا الآن</span>
+            920005708
+          </div>
+        </a>
+        <a href="https://wa.me/966920005708?text=مرحباً،%20أرغب%20في%20الاستفسار%20عن%20خدمة%20التوسط%20في%20استقدام%20عاملة%20منزلية%20🏠" target="_blank" class="btn-whatsapp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 2C6.478 2 2 6.478 2 12c0 1.85.504 3.58 1.38 5.064L2 22l5.09-1.337A9.953 9.953 0 0011.998 22C17.52 22 22 17.522 22 12S17.52 2 11.998 2zm0 18.004c-1.646 0-3.18-.444-4.5-1.214l-.322-.19-3.022.794.808-2.95-.21-.34A8.004 8.004 0 013.996 12c0-4.41 3.592-8.004 8.002-8.004 4.41 0 8.002 3.594 8.002 8.004 0 4.41-3.592 8.004-8.002 8.004z"/></svg>
+          تواصل عبر واتساب
         </a>
       </div>
-
-      <!-- Right: Lead Form -->
-      <div class="form-card">
-        <div class="form-title">احجز استشارتك المجانية</div>
-        <div class="form-subtitle">سيتواصل معك فريقنا خلال <strong>ساعات</strong></div>
-
-        <div class="field">
-          <label>الاسم الكريم *</label>
-          <input type="text" id="f-name" placeholder="أدخل اسمك" required>
-        </div>
-
-        <div class="field">
-          <label>رقم الجوال *</label>
-          <input type="tel" id="f-phone" placeholder="05XXXXXXXX" required>
-        </div>
-
-        <div class="field">
-          <label>الجنسية المطلوبة</label>
-          <div class="select-wrap">
-            <select id="f-nationality">
-              <option value="">-- اختر الجنسية --</option>
-              <!-- أضف الجنسيات هنا -->
-            </select>
-          </div>
-        </div>
-
-        <div class="field">
-          <label>أفضل وقت للتواصل</label>
-          <div class="select-wrap">
-            <select id="f-time">
-              <option value="">-- اختر الوقت --</option>
-              <option>صباحاً (٩:٠٠ - ١٢:٠٠)</option>
-              <option>ظهراً (١٢:٠٠ - ١٥:٠٠)</option>
-              <option>مساءً (١٥:٠٠ - ٢١:٠٠)</option>
-            </select>
-          </div>
-        </div>
-
-        <button class="submit-btn" onclick="submitWhatsApp()">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg>
-          أرسل طلبي الآن
-        </button>
-
-        <button class="whatsapp-alt" onclick="submitWhatsApp()">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 2C6.478 2 2 6.478 2 12c0 1.85.504 3.58 1.38 5.064L2 22l5.09-1.337A9.953 9.953 0 0011.998 22C17.52 22 22 17.522 22 12S17.52 2 11.998 2zm0 18.004c-1.646 0-3.18-.444-4.5-1.214l-.322-.19-3.022.794.808-2.95-.21-.34A8.004 8.004 0 013.996 12c0-4.41 3.592-8.004 8.002-8.004 4.41 0 8.002 3.594 8.002 8.004 0 4.41-3.592 8.004-8.002 8.004z"/></svg>
-          تواصل عبر واتساب
-        </button>
-
-        <p class="form-disclaimer">🔒 بياناتك محمية ولن تُشارك مع أي طرف ثالث</p>
-      </div>
-
     </div>
   </section>
 
@@ -689,27 +564,7 @@
   </footer>
 
   <script>
-    function submitWhatsApp() {
-      const name        = document.getElementById('f-name').value.trim();
-      const phone       = document.getElementById('f-phone').value.trim();
-      const nationality = document.getElementById('f-nationality').value;
-      const time        = document.getElementById('f-time').value;
-
-      if (!name) { alert('الرجاء إدخال الاسم'); return; }
-      if (!phone) { alert('الرجاء إدخال رقم الجوال'); return; }
-
-      const msg = `مرحباً، أرغب في الاستفسار عن خدمة التوسط في استقدام عاملة منزلية 🏠
-
-👤 الاسم: ${name}
-📱 الجوال: ${phone}
-🌍 الجنسية المطلوبة: ${nationality || 'لم يتم التحديد'}
-🕐 أفضل وقت للتواصل: ${time || 'في أي وقت'}
-
-أرجو التواصل معي في أقرب وقت. شكراً 🙏`;
-
-      const url = 'https://wa.me/966920005708?text=' + encodeURIComponent(msg);
-      window.open(url, '_blank');
-    }
+    // No JS required — CTAs are direct links
   </script>
 
 </body>
